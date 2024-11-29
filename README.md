@@ -1,5 +1,9 @@
 # Login Application
 
+<p align="center">
+  <img src="login-ui/src/assets/image.png" alt="Login App Screenshot" width="600">
+</p>
+
 This is a login application built using **Spring Boot** for the backend and **React.js** for the frontend. The application is containerized using Docker, and a Docker Compose setup is provided for seamless deployment.
 
 ---
