@@ -1,10 +1,10 @@
 services:
   mysql:
     image: 'mysql:latest'
+    container_name: 'login-container'
     environment:
-      - 'MYSQL_DATABASE=mydatabase'
-      - 'MYSQL_PASSWORD=secret'
-      - 'MYSQL_ROOT_PASSWORD=verysecret'
-      - 'MYSQL_USER=myuser'
+      - 'MYSQL_DATABASE=logindb'
+      - 'MYSQL_PASSWORD=mysql'
+      - 'MYSQL_ROOT_PASSWORD=mysql'
     ports:
-      - '3306'
+      - '3306:3306'

@@ -9,14 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/app/login")
+@RequestMapping("/app")
 @RequiredArgsConstructor
 @CrossOrigin("*")
 public class LoginController {
 
     private final LoginService loginService;
 
-    @PostMapping
+    @PostMapping("/login")
     public ResponseEntity<?> postLogin(@RequestBody LoginDto loginDto){
         Login savedLog = loginService.PostLogin(loginDto);
 
