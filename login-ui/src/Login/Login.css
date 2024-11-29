@@ -41,3 +41,21 @@
     justify-content: center;
     margin-top: 15px;
 }
+form .success{
+    color: rgb(5, 224, 5);
+    animation:
+      color 15s infinite;
+}
+@keyframes color{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+
+}
+
+form .failed{
+    color: red;
+}

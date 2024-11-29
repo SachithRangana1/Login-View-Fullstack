@@ -79,7 +79,7 @@ const Login: React.FC = () => {
     const formData = {name, email, password};
 
     try {
-      const response = await fetch("http://localhost:5050/app/login", {
+      const response = await fetch("http://localhost:8082/app/login", {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -91,6 +91,10 @@ const Login: React.FC = () => {
           const data = await response.json();
           setSuccessMassage('Login Successful!');
           console.log('success', data);
+
+          setName('');
+          setEmail('');
+          setPassword('');
       }else {
           const errorData = await response.json();
           setSubmitError(errorData.message || 'Login Failed!');
@@ -107,7 +111,12 @@ const Login: React.FC = () => {
         <div className="head">
           <h1>Log In</h1>
         </div>
+
         <form className="wrapper" onSubmit={handleSubmit}>
+
+        {successMassage && <div className="success">{successMassage}</div>}
+        {submitError && <div className="failed">{submitError}</div>}
+
           <div className="inputs-wrapper">
             <div className="name-wrapper">
               <label htmlFor="name" className="label1">
