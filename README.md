@@ -32,11 +32,19 @@ Before running the application, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/login-app.git
-cd login-app 
+git clone (https://github.com/SachithRangana1/Login-View-Fullstack.git)t
+cd login-backend
+cd loin-ui 
 ```
 
-### 2 Open the backend and frontend codes VSCode
+### 2 Open the backend and frontend codes VSCode or IntelliJ idea
+```bash
+idea . 
+```
+or 
+```bash
+code . 
+```
 
 ### 3. Run backend & up docker compose using terminal
 ```bash
